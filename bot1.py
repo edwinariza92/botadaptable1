@@ -130,7 +130,7 @@ def procesar_comando_telegram(comando):
                 f"• Riesgo: {riesgo_pct}\n"
                 f"• BB: {bb_length} / {bb_mult}\n"
                 f"• ATR: {atr_length}\n"
-                f"• MA Tendencia: {ma_trend_length}\n"
+                f"• MA Tendencia: {ma_trend_length} ({'ON' if usar_ma_trend else 'OFF'})\n"
                 f"• Umbral ATR: {umbral_volatilidad}\n"
                 f"• TP Mult: {tp_multiplier} | SL Mult: {sl_multiplier}\n"
                 "v22.10.25")
@@ -144,7 +144,7 @@ def procesar_comando_telegram(comando):
             f"• Periodo BB: `{bb_length}`\n"
             f"• Desviación BB: `{bb_mult}`\n"
             f"• Periodo ATR: `{atr_length}`\n"
-            f"• Periodo MA Tendencia: `{ma_trend_length}`\n"
+            f"• Periodo MA Tendencia: `{ma_trend_length}` ({'ON' if usar_ma_trend else 'OFF'})\n"
             f"• Umbral ATR: `{umbral_volatilidad}`\n"
             f"• TP Mult: `{tp_multiplier}` | SL Mult: `{sl_multiplier}`\n\n"
             "Para cambiar un parámetro, escribe:\n"
@@ -961,6 +961,7 @@ if __name__ == "__main__":
     print("   • 'consultar' - Muestra los últimos mensajes")
     print("   • 'finalizar' - Detiene el bot de trading")
     print("   • 'estado' - Muestra el estado actual")
+    print(f"   • 'mafilter' - Filtro MA tendencia: {'ON' if usar_ma_trend else 'OFF'} (usa: set mafilter on/off)")
     
     # Iniciar el bot de control de Telegram
     bot_telegram_control()
