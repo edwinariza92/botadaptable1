@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=simple
 User=ubuntu
-WorkingDirectory=/home/ubuntu/trading
-ExecStart=/usr/bin/python3 /home/ubuntu/trading/Bots_adaptables/bot1/bot1.py
+WorkingDirectory=/home/ubuntu/bots/bot1/botadaptable1
+ExecStart=/usr/bin/python3 /home/ubuntu/bots/bot1/botadaptable1/bot1.py
 Restart=on-failure
 RestartSec=30
 StandardOutput=journal
